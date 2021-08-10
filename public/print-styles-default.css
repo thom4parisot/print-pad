@@ -1,0 +1,105 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #fffff8;
+}
+
+h1 {
+  string-set: title content(text);
+}
+
+h1:first-of-type {
+  page-break-after: page;
+}
+
+h2, h3, h4 {
+  page-break-after: avoid;
+}
+
+h3 {
+  text-decoration: underline;
+}
+
+.grand {
+  font-size: 2em;
+}
+
+.couverture {
+  margin: 0;
+  height: 100%;
+}
+
+.couverture img {
+  height: 100%;
+  object-fit: cover;
+  max-width: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+@page {
+  size: a4;
+  margin: 2cm;
+  
+  @bottom-center {
+    content: counter(page);
+  }
+}
+
+@page:right {
+  @top-center {
+    content: var(--publication-title);
+  }
+}
+
+@page:left {
+  @top-center {
+    content: string(title);
+  }
+}
+
+
+blockquote {
+  font-style: italic;
+}
+
+.pagedjs_page_content {
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center; */
+}
+
+.scase {
+  font-variant: small-caps;
+}
+
+/* First Page */
+.pagedjs_first_page .pagedjs_page_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/** :::info */
+div.info,
+div.warning{
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+div.info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+div.warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
