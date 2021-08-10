@@ -1,0 +1,26 @@
+<html>
+  
+  <head>
+    <title>{{ metas.title }}</title>
+    <meta name="description" content="{{metas.description}}">
+    <meta property="og:title" content="{{metas.title}}">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{{metas.description}}">
+    <meta property="og:image" content="{{seo.image}}">
+    <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="/print-preview.css">
+    <link rel="stylesheet" href="/print-styles-default.css">
+    <style>
+      :root {
+        --publication-title: "{{{ metas.title }}}";
+      }
+    </style>
+    <script type="module">
+      import {Previewer} from 'https://unpkg.com/pagedjs@0.2.0/dist/paged.esm.js';
+      
+      new Previewer().preview()
+    </script>
+  </head>
+
+  <body>{{{ html }}}</body>
+</html>

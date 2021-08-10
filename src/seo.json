@@ -1,0 +1,7 @@
+{
+  "glitch-help-instructions": "For a custom domain, change the 'url' parameter from 'glitch-default' to your domain _without_ a traling slash, like 'https://www.example.com'",
+  "title": "Print Pad La Myne",
+  "description": "Convertis un pad en un document imprimable au format PDF.",
+  "url": "glitch-default",
+  "image": "https://www.lamyne.org/img/lamyne-bandeau.png"
+}

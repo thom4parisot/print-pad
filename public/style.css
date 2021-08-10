@@ -1,0 +1,172 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #fe7e00;
+  --color-text-main: #fff;
+  --color-primary: #fff;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: BlinkMacSystemFont,-apple-system,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,helvetica,arial,sans-serif;
+  --font-family-header: BlinkMacSystemFont,-apple-system,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,helvetica,arial,sans-serif;
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  margin: 0 1rem;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+
+p {
+  font-size: 1.25rem;
+}
+
+/* Title h1 style */
+.title {
+  color: var(--color-primary);
+  font-family: var(--font-family-header);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 105%;
+  margin: 2rem 0 0;
+}
+.title img {
+  max-width: 500px;
+}
+
+/* Very light scaling for our illustration */
+.illo-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.illustration {
+  max-width: 100%;
+  max-height: 150px;
+  margin-top: 1rem;
+}
+
+/* Styles for our custom color form and its results */
+.color-info {
+  margin-left: 5px;
+}
+.color-search {
+  margin-top: 3rem;
+}
+.color-form {
+}
+
+.pad-history summary {
+  cursor: pointer;
+}
+
+.color-form a:not(.btn--remix) {
+  font-weight: bold;
+  color: var(--color-text-main);
+  margin-top: 8px;
+  white-space: pre-line;
+}
+.color-form button {
+  margin-top: 8px;
+}
+.color-form button:hover {
+  cursor: pointer;
+  box-shadow: -8px 4px 20px #9BE7D8;
+}
+form {
+  margin: 0.75rem 0;
+}
+button,
+input,
+select{
+  font-family: inherit;
+  font-size: 100%;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+label {
+  color: var(--color-text-main);
+  font-weight: bold;
+}
+
+form .group {
+  margin-bottom: 1em;
+}
+
+/* Instructions */
+.instructions {
+  margin: 1rem auto 0;
+}
+.instructions p {
+  font-size: 1rem;
+}
+h2 {
+  color: var(--color-primary);
+}
